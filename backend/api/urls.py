@@ -16,6 +16,6 @@ router.register('warehouse', products_views.WarehouseView)
 # router.register('home', api_home_views.api_home)
 urlpatterns = [
     # path('home', api_home_views.api_home),
-    # path('', include(router.urls))
+    path('', include(router.urls))
     # patch('', views)
 ]
