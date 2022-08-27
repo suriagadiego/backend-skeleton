@@ -24,5 +24,4 @@ jobs:
           git remote add heroku https://heroku:${{ secrets.HEROKU_TOKEN }}@git.heroku.com/${{ secrets.HEROKU_DJANGO_GLOBAL_APP }}.git
       - name: Deploy to Heroku
         run: |
-          git pull heroku --ff-only
-          git push heroku HEAD:master -f
+          git push heroku HEAD:main -f
