@@ -26,7 +26,6 @@ jobs:
         if: github.ref == 'refs/heads/master' && job.status == 'success' #we specify that this action will ONLY run if everything up to now is successful- so if theres a fail in the tests, then this will not be deployed.
         run: |
           git remote add heroku https://heroku:${{ secrets.HEROKU_TOKEN }}@git.heroku.com/${{ secrets.HEROKU_DJANGO_GLOBAL_APP }}.git
-      - name: Deploy to Heroku
-        run: |
-          heroku git:remote -a global-django
           git push heroku HEAD:master -f
+      # - name: Deploy to Heroku
+      #   run: |
