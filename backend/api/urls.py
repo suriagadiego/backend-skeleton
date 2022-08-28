@@ -1,7 +1,8 @@
 from django.urls import path, include
-from . import views as api_home_views
+from .views import MyTokenObtainPairView
 from products import views as products_views
 from rest_framework import routers
+from rest_framework_simplejwt.views import TokenRefreshView
 
 router = routers.DefaultRouter()
 router.register('users', products_views.UserView)
@@ -16,6 +17,8 @@ router.register('warehouse', products_views.WarehouseView)
 # router.register('home', api_home_views.api_home)
 urlpatterns = [
     # path('home', api_home_views.api_home),
-    path('', include(router.urls))
+    path('', include(router.urls)),
+    path('token/', MyTokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     # patch('', views)
 ]
