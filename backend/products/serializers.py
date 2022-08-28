@@ -44,6 +44,7 @@ class WarehouseSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Warehouse
         fields = ('id', 'warehouse_no', 'is_active','updated_at', 'created_at')
+        
 
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
