@@ -34,6 +34,10 @@ structlog = "==22.1.0"
 tabulate = "==0.8.10"
 toml = "==0.10.2"
 wimpy = "==0.6"
+django-heroku = "==0.3.1"
+heroku = "==0.1.4"
+psycopg2 = "==2.9.3"
+python-dateutil = "==1.5"
 
 [dev-packages]
 
