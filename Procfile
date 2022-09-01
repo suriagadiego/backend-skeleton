@@ -1,2 +1,2 @@
 release: python backend/manage.py migrate
-web: gunicorn backend.wsgi:app
+web: gunicorn --pythonpath backend cfehome.wsgi
