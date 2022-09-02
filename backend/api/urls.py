@@ -14,7 +14,7 @@ router.register('transaction_history', products_views.TransactionHistoryView)
 router.register('product', products_views.ProductView)
 router.register('unit', products_views.UnitView)
 router.register('warehouse', products_views.WarehouseView)
-# router.register('home', api_home_views.api_home)
+
 urlpatterns = [
     # path('home', api_home_views.api_home),
     path('', include(router.urls)),
